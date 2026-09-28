@@ -3,149 +3,176 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Course hub Teknologi Blockchain ITTS — jadwal kelas, materi, tugas, kuis, UTS, UAS, dan rencana semester." />
-  <meta name="theme-color" content="#0a6d79" />
+  <meta name="description" content="Course hub Teknologi Blockchain ITTS — jadwal kelas, materi, tugas, kuis, UTS, UAS, dan semester journey." />
+  <meta name="theme-color" content="#07131f" />
   <title>Teknologi Blockchain — ITTS Course Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="noise"></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Teknologi Blockchain home">
-      <span class="brand-mark">BC</span>
-      <span>
-        <strong>Teknologi Blockchain</strong>
-        <small>ITTS · 2026/2027 Ganjil</small>
+      <span class="brand-mark">⛓</span>
+      <span class="brand-copy">
+        <strong>Blockchain Class</strong>
+        <small>ITTS · 2026/2027</small>
       </span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Buka navigasi">☰</button>
     <nav id="mainNav">
       <a href="#classes">Kelas</a>
       <a href="#schedule">Schedule</a>
-      <a href="#materials">Material</a>
-      <a href="#assessments">Task & Quiz</a>
-      <a href="#grading">Penilaian</a>
+      <a href="#materials">Materi</a>
+      <a href="#assessments">Task</a>
+      <a href="#grading">Nilai</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
       <div class="hero-copy">
-        <span class="eyebrow">COURSE HUB · PROGRAM STUDI TI & INFORMATIKA</span>
-        <h1>Teknologi Blockchain</h1>
-        <p class="hero-lead">Satu portal untuk class schedule, learning path, material mingguan, hands-on, kuis, tugas, UTS, dan UAS untuk tiga kelas Teknologi Blockchain ITTS.</p>
+        <div class="eyebrow-pill"><span class="pulse-dot"></span> COURSE HUB · LIVE SEMESTER</div>
+        <h1><span>Teknologi</span><br/>Blockchain<span class="accent-dot">.</span></h1>
+        <p class="hero-lead">Satu tempat untuk jadwal, materi, hands-on, kuis, tugas, UTS, dan UAS. Dibuat supaya mahasiswa bisa langsung tahu <strong>minggu ini belajar apa</strong> dan <strong>harus mengerjakan apa</strong>.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#schedule">Lihat Class Schedule</a>
-          <a class="btn ghost" href="#materials">Buka Materi</a>
+          <a class="btn primary" href="#schedule">Explore semester <span>↘</span></a>
+          <a class="btn glass" href="#materials">Browse materials</a>
         </div>
-        <div class="hero-meta">
-          <span>👨‍🏫 Taufik Iqbal Ramdhani, S.Kom., M.Sc.</span>
-          <span>📚 16 pertemuan</span>
-          <span>🎯 OBE-aligned</span>
+        <div class="hero-facts">
+          <div><span class="fact-label">DOSEN</span><strong>Taufik Iqbal Ramdhani</strong></div>
+          <div><span class="fact-label">FORMAT</span><strong>Hybrid · 3 kelas</strong></div>
+          <div><span class="fact-label">ROADMAP</span><strong>16 pertemuan</strong></div>
         </div>
       </div>
-      <div class="hero-panel" id="heroClasses"></div>
+
+      <div class="hero-side">
+        <div class="floating-label">WEEKLY CLASS BOARD</div>
+        <div class="week-board" id="heroClasses"></div>
+        <div class="hero-mini-card">
+          <div>
+            <span class="mini-kicker">Learning path</span>
+            <strong>Fundamentals → Build → Design → Secure → Evaluate</strong>
+          </div>
+          <span class="spark">✦</span>
+        </div>
+      </div>
     </section>
 
-    <section class="metrics" aria-label="Course metrics">
-      <div><strong>3</strong><span>Kelas aktif</span></div>
-      <div><strong>16</strong><span>Pertemuan</span></div>
-      <div><strong>9</strong><span>Kuis & tugas</span></div>
-      <div><strong>100%</strong><span>Skema penilaian</span></div>
+    <section class="quick-strip">
+      <div><span class="quick-number">03</span><span>Kelas</span></div>
+      <div><span class="quick-number">16</span><span>Pertemuan</span></div>
+      <div><span class="quick-number">09</span><span>Kuis & tugas</span></div>
+      <div><span class="quick-number">100%</span><span>Assessment map</span></div>
     </section>
 
     <section id="classes" class="section">
-      <div class="section-heading">
+      <div class="section-heading split">
         <div>
-          <span class="eyebrow">CLASS INFORMATION</span>
-          <h2>Kelas yang Diampu</h2>
+          <span class="eyebrow">YOUR CLASS</span>
+          <h2>Pilih kelasmu.<br/><em>Know the rhythm.</em></h2>
         </div>
-        <p>Materi inti dan asesmen menggunakan learning path yang sama. Pelaksanaan mengikuti jadwal, durasi, dan moda masing-masing kelas.</p>
+        <p>Tiga kelas menggunakan learning path yang sama, tetapi moda dan durasi perkuliahannya berbeda. Simpan jadwal yang sesuai kelasmu.</p>
       </div>
       <div class="class-grid" id="classGrid"></div>
     </section>
 
-    <section id="schedule" class="section surface">
+    <section id="schedule" class="section dark-section">
       <div class="section-heading">
         <div>
-          <span class="eyebrow">SEMESTER PLAN</span>
-          <h2>Class Schedule & Learning Roadmap</h2>
+          <span class="eyebrow mint">SEMESTER JOURNEY</span>
+          <h2>Schedule yang gampang discan.</h2>
+          <p class="section-sub">Bukan tabel panjang. Lihat per fase, minggu, topik, fokus, dan assessment dalam satu alur.</p>
         </div>
-        <p>Pertemuan 8 adalah UTS dan Pertemuan 16 adalah UAS. Materi 1–15 membentuk progres dari konsep, implementasi, desain, hingga evaluasi solusi blockchain.</p>
       </div>
+
+      <div class="phase-rail" id="phaseRail"></div>
+
       <div class="schedule-toolbar">
-        <div class="chips" id="weekFilters"></div>
-        <input id="scheduleSearch" type="search" placeholder="Cari topik, Sub-CPMK, aktivitas…" />
+        <div class="view-switch" id="scheduleViewSwitch">
+          <button class="active" data-view="journey">Journey</button>
+          <button data-view="compact">Compact</button>
+        </div>
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="scheduleSearch" type="search" placeholder="Cari minggu, topik, consensus, Solidity…" />
+        </label>
       </div>
-      <div class="schedule-table-wrap">
-        <table class="schedule-table">
-          <thead>
-            <tr><th>Minggu</th><th>Topik</th><th>Capaian / Fokus</th><th>Asesmen</th></tr>
-          </thead>
-          <tbody id="scheduleBody"></tbody>
-        </table>
-      </div>
+
+      <div id="scheduleJourney" class="schedule-journey"></div>
+      <div id="scheduleCompact" class="schedule-compact hidden"></div>
     </section>
 
     <section id="materials" class="section">
-      <div class="section-heading">
+      <div class="section-heading split">
         <div>
-          <span class="eyebrow">LEARNING MATERIALS</span>
-          <h2>Material & Hands-on</h2>
+          <span class="eyebrow">MATERIAL LIBRARY</span>
+          <h2>Belajar per minggu.<br/><em>No digging around.</em></h2>
         </div>
-        <p>Setiap kartu memuat ringkasan materi, konsep utama, aktivitas kelas, dan mapping file bila slide/PDF akan ditambahkan ke repository.</p>
+        <p>Semua topik disusun seperti playlist: konsep inti, aktivitas kelas, assessment, serta nama file slide dan hands-on yang sudah disiapkan.</p>
       </div>
+
       <div class="materials-controls">
-        <input id="materialSearch" type="search" placeholder="Cari materi: consensus, Solidity, Hyperledger…" />
+        <label class="search-box light">
+          <span>⌕</span>
+          <input id="materialSearch" type="search" placeholder="Cari material…" />
+        </label>
         <select id="materialType">
-          <option value="all">Semua pertemuan</option>
+          <option value="all">Semua</option>
           <option value="lecture">Materi & hands-on</option>
           <option value="exam">UTS / UAS</option>
         </select>
       </div>
+
       <div class="material-grid" id="materialGrid"></div>
     </section>
 
-    <section id="assessments" class="section surface">
-      <div class="section-heading">
+    <section id="assessments" class="section soft-section">
+      <div class="section-heading split">
         <div>
           <span class="eyebrow">ASSESSMENTS</span>
-          <h2>Task, Quiz, UTS & UAS</h2>
+          <h2>Task tracker.</h2>
         </div>
-        <p>Asesmen mengikuti bobot RPKPS: Kuis 10%, Praktik/Tugas 20%, Tugas Kelompok 10%, Presentasi 10%, UTS 20%, dan UAS 30%.</p>
+        <p>Lihat kapan kuis, tugas individu, tugas kelompok, presentasi, UTS, dan UAS muncul — beserta bobotnya.</p>
       </div>
       <div class="assessment-summary" id="assessmentSummary"></div>
       <div class="assessment-list" id="assessmentList"></div>
     </section>
 
     <section id="grading" class="section">
-      <div class="section-heading">
+      <div class="section-heading split">
         <div>
-          <span class="eyebrow">GRADING</span>
-          <h2>Komponen Penilaian</h2>
+          <span class="eyebrow">GRADING MAP</span>
+          <h2>Nilai akhir,<br/><em>made transparent.</em></h2>
         </div>
-        <p>Bobot menunjukkan kontribusi terhadap nilai akhir mata kuliah dan berjumlah 100%.</p>
+        <p>Setiap komponen langsung terlihat kontribusinya terhadap nilai akhir. Total keseluruhan = 100%.</p>
       </div>
       <div class="grading-layout">
         <div class="grading-bars" id="gradingBars"></div>
         <div class="course-note">
-          <h3>Learning progression</h3>
+          <span class="eyebrow mint">THE BIG PICTURE</span>
+          <h3>Dari tahu konsep sampai bisa mengevaluasi solusi.</h3>
           <ol>
-            <li><strong>Foundation:</strong> konsep, arsitektur, model, dan kriptografi.</li>
-            <li><strong>Mechanism:</strong> consensus dan implementasi blockchain sederhana.</li>
-            <li><strong>Design:</strong> solusi blockchain, smart contract, dan DApp.</li>
-            <li><strong>Enterprise & Security:</strong> Ethereum, Hyperledger, security.</li>
-            <li><strong>Evaluation:</strong> scalability, interoperability, dan use cases.</li>
+            <li><strong>01 · Foundation</strong><span>Konsep, arsitektur, model, kriptografi.</span></li>
+            <li><strong>02 · Mechanism</strong><span>Consensus dan blockchain sederhana.</span></li>
+            <li><strong>03 · Build</strong><span>Smart contract, DApp, Ethereum, Fabric.</span></li>
+            <li><strong>04 · Evaluate</strong><span>Security, scale, interoperability, use case.</span></li>
           </ol>
         </div>
       </div>
     </section>
 
     <section class="section references">
-      <div class="section-heading">
+      <div class="section-heading split">
         <div>
-          <span class="eyebrow">REFERENCES</span>
-          <h2>Referensi Utama</h2>
+          <span class="eyebrow">READ / BUILD / VERIFY</span>
+          <h2>Referensi utama.</h2>
         </div>
+        <p>Buku dan dokumentasi yang menjadi pijakan konsep serta praktikum.</p>
       </div>
       <div class="reference-grid" id="referenceGrid"></div>
     </section>
@@ -153,13 +180,12 @@
 
   <footer>
     <div>
-      <strong>Teknologi Blockchain — ITTS</strong>
+      <strong>Teknologi Blockchain · ITTS</strong>
       <span>Course Hub · Semester Ganjil 2026/2027</span>
     </div>
-    <a href="https://github.com/taufikiqbalr/teknologi-blockchain" target="_blank" rel="noreferrer">GitHub Repository ↗</a>
+    <a href="https://github.com/taufikiqbalr/teknologi-blockchain" target="_blank" rel="noreferrer">Open GitHub ↗</a>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script type="module" src="/app.js"></script>
 </body>
 </html>
