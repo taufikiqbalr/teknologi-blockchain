@@ -28,6 +28,7 @@
       <a href="#materials">Materi</a>
       <a href="#assessments">Task</a>
       <a href="#grading">Nilai</a>
+      <a href="#games">Games</a>
     </nav>
   </header>
 
@@ -67,7 +68,7 @@
       <div><span class="quick-number">03</span><span>Kelas</span></div>
       <div><span class="quick-number">16</span><span>Pertemuan</span></div>
       <div><span class="quick-number">09</span><span>Kuis & tugas</span></div>
-      <div><span class="quick-number">100%</span><span>Assessment map</span></div>
+      <div><span class="quick-number">04</span><span>Mini-games</span></div>
     </section>
 
     <section id="classes" class="section">
@@ -166,6 +167,73 @@
       </div>
     </section>
 
+
+    <section id="games" class="section game-zone">
+      <div class="game-bg game-bg-a"></div>
+      <div class="game-bg game-bg-b"></div>
+      <div class="section-heading split game-heading">
+        <div>
+          <span class="eyebrow mint">STUDY BREAK · ARCADE LAB</span>
+          <h2>Reset otak.<br/><em>Main sebentar.</em></h2>
+        </div>
+        <p>Mini-games ringan bertema blockchain untuk jeda di sela belajar. Tidak masuk nilai — main untuk refresh, pecahkan personal best, lalu balik ke materi.</p>
+      </div>
+
+      <div class="game-dashboard">
+        <div>
+          <span>YOUR ARCADE PROFILE</span>
+          <strong id="gameRank">Rookie Node</strong>
+        </div>
+        <div class="game-stat"><small>XP</small><strong id="gameXp">0</strong></div>
+        <div class="game-stat"><small>Games cleared</small><strong id="gamesCleared">0 / 4</strong></div>
+        <button class="reset-score" id="resetGameProgress">Reset progress</button>
+      </div>
+
+      <div class="game-grid">
+        <article class="game-card runner-card">
+          <div class="game-card-top"><span class="game-icon">🦖</span><span class="game-chip">ARCADE</span></div>
+          <h3>Block Runner</h3>
+          <p>Dino-style jumping game. Lompat melewati invalid block dan kejar high score.</p>
+          <div class="game-meta"><span>⚡ Reflex</span><span>⌨ Space / tap</span></div>
+          <button class="play-game" data-game="runner">Play Block Runner <span>↗</span></button>
+        </article>
+
+        <article class="game-card memory-card">
+          <div class="game-card-top"><span class="game-icon">🧠</span><span class="game-chip">PUZZLE</span></div>
+          <h3>Hash Flip</h3>
+          <p>Memory puzzle: pasangkan konsep blockchain dengan clue yang tepat.</p>
+          <div class="game-meta"><span>✦ Memory</span><span>12 cards</span></div>
+          <button class="play-game" data-game="memory">Play Hash Flip <span>↗</span></button>
+        </article>
+
+        <article class="game-card chain-card">
+          <div class="game-card-top"><span class="game-icon">⛓</span><span class="game-chip">LOGIC</span></div>
+          <h3>Build the Chain</h3>
+          <p>Susun blok dari genesis sampai latest block dengan mencocokkan previous hash.</p>
+          <div class="game-meta"><span>◇ Logic</span><span>4 blocks</span></div>
+          <button class="play-game" data-game="chain">Build the Chain <span>↗</span></button>
+        </article>
+
+        <article class="game-card consensus-card">
+          <div class="game-card-top"><span class="game-icon">⚡</span><span class="game-chip">SPEED QUIZ</span></div>
+          <h3>Consensus Rush</h3>
+          <p>Pilih consensus paling cocok untuk lima skenario secepat mungkin.</p>
+          <div class="game-meta"><span>◈ Strategy</span><span>5 scenarios</span></div>
+          <button class="play-game" data-game="consensus">Start Rush <span>↗</span></button>
+        </article>
+      </div>
+
+      <div class="game-note">
+        <span>💡</span>
+        <p><strong>Learning bonus:</strong> Hash Flip, Build the Chain, dan Consensus Rush memakai konsep yang muncul di materi — tetap fun tanpa lepas dari konteks kuliah.</p>
+      </div>
+    </section>
+
+    <dialog id="gameModal" class="game-modal">
+      <button class="modal-close" id="closeGameModal" aria-label="Tutup game">×</button>
+      <div id="gameStage"></div>
+    </dialog>
+
     <section class="section references">
       <div class="section-heading split">
         <div>
@@ -187,5 +255,6 @@
   </footer>
 
   <script type="module" src="/app.js"></script>
+  <script type="module" src="/games.js"></script>
 </body>
 </html>
